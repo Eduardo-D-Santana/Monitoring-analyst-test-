@@ -1,40 +1,40 @@
 # Transaction Anomaly Alert System
 
-Este projeto é uma solução para o desafio técnico de criar um sistema de monitoramento com alertas de anomalias em transações, utilizando dados históricos e lógica baseada em regras simples.
+This project is a solution to the technical challenge of creating a monitoring system with transaction anomaly alerts, using historical data and simple rule-based logic.
 
-## 🔧 Tecnologias
+## 🔧 Technologies
 
 - Python 3
 - Flask
 - Pandas
-- Grafana (para visualização)
-- CSV como fonte de dados
+- Grafana (for visualization)
+- CSV as a data source
 
-## 📁 Estrutura
+## 📁 Structure
 
-- `app.py`: API com endpoints para acessar dados, sumarizar status e emitir alertas.
-- `data/`: contém os arquivos `transactions.csv` e `transactions_auth_codes.csv`.
-- `dashboards/`: estrutura para export de dashboards do Grafana.
-- `report.pdf`: relatório técnico explicando lógica, arquitetura e decisões.
+- `app.py`: API with endpoints for accessing data, summarizing status, and issuing alerts.
+- `data/`: Contains the `transactions.csv` and `transactions_auth_codes.csv` files.
+- `dashboards/`: Structure for exporting Grafana dashboards.
+- `report.pdf`: Technical report explaining logic, architecture, and decisions.
 
 ## 📊 Endpoints
 
-- `/`: Teste de saúde da API.
-- `/transactions`: Lista completa das transações.
-- `/auth_codes`: Lista completa dos códigos de autorização.
-- `/summary`: Retorna o total por status de transação.
-- `/alert`: Detecta anomalias nos últimos 5 minutos com base na média histórica.
+- `/`: API health test.
+- `/transactions`: Complete list of transactions.
+- `/auth_codes`: Complete list of authorization codes.
+- `/summary`: Returns the total by transaction status.
+- `/alert`: Detects anomalies in the last 5 minutes based on the historical average.
 
-## 🚨 Lógica de Alerta
+## 🚨 Alert Logic
 
-Utiliza um modelo baseado em regras:
-- Se o número de transações `FAILED`, `REVERSED`, `DENIED`, `BACKEND_REVERSED` ou `REFUNDED` nos últimos 5 minutos for 50% maior do que a média histórica por minuto, um alerta é emitido.
+Uses a rule-based model:
+- If the number of `FAILED`, `REVERSED`, `DENIED`, `BACKEND_REVERSED`, or `REFUNDED` transactions in the last 5 minutes is 50% higher than the historical average per minute, an alert is issued.
 
-## ▶️ Como rodar
+## ▶️ How to run
 
 ```bash
-# Instale as dependências
+# Install the dependencies
 pip install -r requirements.txt
 
-# Execute a API
+# Run the API
 python3 app.py
