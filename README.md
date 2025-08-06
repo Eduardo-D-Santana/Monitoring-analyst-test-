@@ -40,3 +40,5 @@ pip install -r requirements.txt
 
 # Run the API
 python3 app.py
+
+![IA for Eduado D  Santana](https://github.com/user-attachments/assets/b27ae3ac-c3ba-47f6-8821-4bc893b2f970)
