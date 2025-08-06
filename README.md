@@ -1,6 +1,4 @@
 <img width="1671" height="993" alt="image" src="https://github.com/user-attachments/assets/fcf4c350-5a80-4bf9-952f-358389197bf9" />
-
-
 # Transaction Anomaly Alert System
 
 This project is a solution to the technical challenge of creating a monitoring system with transaction anomaly alerts, using historical data and simple rule-based logic.
